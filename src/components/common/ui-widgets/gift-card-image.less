@@ -1,8 +1,16 @@
 @import '../../../utils/styles/mixins.less';
 
 .gift-card-image {
+	@primary-selected-color: var(--color-blue-400);
+
 	.flexbox();
 	width: 100%;
+
+	&--selected {
+    .gift-card-image__clear-overlay {
+			box-shadow: inset 0 0 0 6px @primary-selected-color;
+		}
+	}
 
 	&__wrapper {
 		aspect-ratio: 300/190;

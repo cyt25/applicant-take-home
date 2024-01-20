@@ -2,6 +2,8 @@ import React from 'react';
 import Classnames from 'classnames';
 import { GiftCard, BonusTag } from '../../../../../components/common/';
 import { PrizeoutOffer } from '../../../../../slices/offers-slice';
+import { useAppSelector } from '../../../../../hooks';
+import { selectSelectedOfferId } from '../../../../../slices/checkout-slice';
 
 import './offer-gift-card.less';
 
@@ -19,6 +21,7 @@ export const OfferGiftCard: React.FC<OfferGiftCardProps> = ({ offer, onClickHand
     const classes: string = Classnames('offer-gift-card', {
         'offer-gift-card--selected': activeOfferId === firstGiftCard.checkout_value_id,
     });
+    const isSelected = offer.id === useAppSelector(selectSelectedOfferId);
 
     const selectOfferOnEnter = (event: React.KeyboardEvent<HTMLElement>) => {
         if (event.key === 'Enter') {
@@ -34,7 +37,13 @@ export const OfferGiftCard: React.FC<OfferGiftCardProps> = ({ offer, onClickHand
             role="button"
             tabIndex={0}
         >
-            <GiftCard name={offer.name} imgUrl={offer.image_url} altText={offer.name} className="offer" />
+            <GiftCard
+                name={offer.name}
+                imgUrl={offer.image_url}
+                altText={offer.name}
+                className="offer"
+                isSelected={isSelected}
+            />
             {offerValue > 0 && <BonusTag type={offerType} value={offerValue} size="small" />}
         </div>
     );

@@ -1,4 +1,4 @@
-import { render } from '../../../testing/test-utils';
+import { render, screen } from '../../../testing/test-utils';
 import React from 'react';
 import { GiftCardImage } from './gift-card-image';
 
@@ -8,5 +8,11 @@ describe('Test Gift Card Image Component', () => {
     test('Component matches snapshot', () => {
         const { asFragment } = render(<GiftCardImage imgUrl={imageUrl} />);
         expect(asFragment()).toMatchSnapshot();
+    });
+
+    test('Disabled class if disabled state is true', () => {
+        render(<GiftCardImage imgUrl={imageUrl} isSelected />);
+
+        expect(screen.getByTestId('gift-card-image')).toHaveClass('gift-card-image--selected');
     });
 });

@@ -38,6 +38,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 0,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/MAGZ-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -68,6 +69,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 1,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/PETS-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -91,6 +93,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 1800,
                         },
                     ],
+                    id: 2,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/GCODESVE15_fp01.png',
                     is_enabled: true,
@@ -128,6 +131,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 3,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/EBOOKUL_fp01.png',
                     is_enabled: true,
@@ -158,6 +162,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 2500,
                         },
                     ],
+                    id: 4,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/WEBKINZ_fp01.png',
                     is_enabled: true,
@@ -230,6 +235,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 50000,
                         },
                     ],
+                    id: 5,
                     image_url: 'https://playground.wegift.io/static/product_assets/GHC-US/GHC-US-card.png',
                     is_enabled: true,
                     logomark_url: null,
@@ -280,6 +286,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 50000,
                         },
                     ],
+                    id: 6,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/SMCL-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -317,6 +324,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 7,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/IMVU-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -368,6 +376,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 8,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/FACEBOOK_fp01.png',
                     is_enabled: true,
@@ -391,6 +400,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 3600,
                         },
                     ],
+                    id: 9,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/GCODESVE30_fp01.png',
                     is_enabled: true,
@@ -414,6 +424,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 15000,
                         },
                     ],
+                    id: 10,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/WENT-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -444,6 +455,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 10000,
                         },
                     ],
+                    id: 11,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/CLWY-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -464,6 +476,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 12,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/CPOP-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -535,6 +548,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 20000,
                         },
                     ],
+                    id: 13,
                     image_url: 'https://dev.static.prizeout.com/campaign-creative/1605299018.527654-1234.png',
                     is_enabled: true,
                     logomark_url: null,
@@ -568,6 +582,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 14,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/SRXM-D-00-16-1_fp01.png',
                     is_enabled: true,
@@ -589,6 +604,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 2000,
                         },
                     ],
+                    id: 15,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/WGWOWSHIP_fp01.png',
                     is_enabled: true,
@@ -612,6 +628,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 500,
                         },
                     ],
+                    id: 16,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/PIRATE101_fp01.png',
                     is_enabled: true,
@@ -641,6 +658,7 @@ export const offersInitialState: OffersState = {
                             value_in_cents: 5000,
                         },
                     ],
+                    id: 17,
                     image_url:
                         'https://d13080yemosbe2.cloudfront.net/Images/GiftCardFaceplates/External/FNDG-D-01-16-1_fp01.png',
                     is_enabled: true,
@@ -685,6 +703,7 @@ export type PrizeoutOffer = {
     stores?: []; // tbd in later phase
     support_creative_list?: []; // tbd in later phase
     tag: string;
+    id: number;
 };
 
 type PrizeoutOfferValueOptions = {
