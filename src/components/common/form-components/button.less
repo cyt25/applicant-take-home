@@ -1,6 +1,7 @@
 @import '../../../utils/styles/mixins.less';
 
 .button {
+	@xsmall-padding: .6rem 0;
 	@small-padding: .5rem 1.25rem;
 	@medium-padding: .75rem 2.5rem;
 	
@@ -16,6 +17,9 @@
 	@secondary-hover-border-color: var(--color-grey-100);
 	@secondary-active-background-color: var(--color-grey-200);
 	@secondary-active-border-color: var(--color-grey-200);
+
+	@tertiary-background-color: var(--color-grey-300);
+	@tertiary-color: var(--color-black);
 	
 	@confirm-background-color: var(--color-blue-700);
 	@confirm-color: var(--color-white);
@@ -109,6 +113,22 @@
 			border-color: @secondary-active-border-color;
 		}
 	}
+
+	&--tertiary {
+		background-color: @tertiary-background-color;
+		color: @tertiary-color;
+		border: 1px solid @secondary-border-color;
+
+		&:hover {
+			background-color: @secondary-hover-background-color;
+			border-color: @secondary-hover-border-color;
+		}
+		
+		&:active {
+			background-color: @secondary-active-background-color;
+			border-color: @secondary-active-border-color;
+		}
+	}
 	
 	&--confirm {
 		background-color: @confirm-background-color;
@@ -123,7 +143,13 @@
 			background-color: @confirm-active-background-color;
 		}
 	}
-		
+			
+	&--xsmall {
+		border-radius: var(--border-radius-tertiary);
+		font-size: var(--font-size-xs);
+		padding: @xsmall-padding;
+	}
+
 	&--small {
 		border-radius: var(--border-radius-primary);
 		font-size: var(--font-size-s);

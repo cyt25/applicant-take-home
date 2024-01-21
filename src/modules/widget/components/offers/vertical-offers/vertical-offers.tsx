@@ -1,12 +1,17 @@
 import React from 'react';
 import Classnames from 'classnames';
-import { PrizeoutOffer, PrizeoutOfferSettings } from '../../../../../slices/offers-slice';
+import {
+    PrizeoutOffer,
+    PrizeoutOfferSettings,
+    setSelectedGiftCardId,
+    setSelectedOfferId,
+} from '../../../../../slices/offers-slice';
 import { OfferGiftCard } from '../offer-gift-card/offer-gift-card';
 import { useAppSelector } from '../../../../../hooks';
 import { selectIsCheckoutPanelCollapsed } from '../../../../../slices/common-slice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../../../store';
-import { toggleIsCollapsedCheckoutPanelOpen, setSelectedOfferId } from '../../../../../slices/checkout-slice';
+import { toggleIsCollapsedCheckoutPanelOpen } from '../../../../../slices/checkout-slice';
 
 import './vertical-offers.less';
 
@@ -25,8 +30,8 @@ const VerticalOffers: React.FC<OfferView> = ({ offers, viewSettings }): React.Re
         if (isCheckoutPanelCollapsedView) {
             dispatch(toggleIsCollapsedCheckoutPanelOpen());
         }
-        console.log(offer);
         dispatch(setSelectedOfferId(offer.id));
+        dispatch(setSelectedGiftCardId(offer.giftcard_list[0].checkout_value_id));
     };
 
     const returnOffers = () => {

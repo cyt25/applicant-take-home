@@ -1,9 +1,8 @@
 import React from 'react';
 import Classnames from 'classnames';
 import { GiftCard, BonusTag } from '../../../../../components/common/';
-import { PrizeoutOffer } from '../../../../../slices/offers-slice';
+import { PrizeoutOffer, selectSelectedOfferId } from '../../../../../slices/offers-slice';
 import { useAppSelector } from '../../../../../hooks';
-import { selectSelectedOfferId } from '../../../../../slices/checkout-slice';
 
 import './offer-gift-card.less';
 

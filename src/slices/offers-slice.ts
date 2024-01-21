@@ -1,9 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 // Define a type for the slice state
 export interface OffersState {
     offers?: PrizeoutOffers;
+    selectedOfferId: number;
+    selectedGiftCardId: string;
 }
 
 // Define the initial state
@@ -676,6 +678,8 @@ export const offersInitialState: OffersState = {
             type: 'vertical-offers',
         },
     ],
+    selectedGiftCardId: '',
+    selectedOfferId: -1,
 };
 
 type PrizeoutOffers = PrizeoutOfferViews[];
@@ -706,7 +710,7 @@ export type PrizeoutOffer = {
     id: number;
 };
 
-type PrizeoutOfferValueOptions = {
+export type PrizeoutOfferValueOptions = {
     checkout_value_id: string;
     cost_in_cents: number;
     display_bonus?: number;
@@ -721,9 +725,34 @@ type OffersRequest = {
 export const offersSlice = createSlice({
     initialState: offersInitialState,
     name: 'offers',
-    reducers: {},
+    reducers: {
+        setSelectedGiftCardId(state, action: PayloadAction<string>) {
+            state.selectedGiftCardId = action.payload;
+        },
+        setSelectedOfferId(state, action: PayloadAction<number>) {
+            state.selectedOfferId = action.payload;
+        },
+    },
 });
 
+export const { setSelectedOfferId, setSelectedGiftCardId } = offersSlice.actions;
+
 export const selectOffers = ({ offers }: RootState): PrizeoutOffers => offers.offers;
+
+export const selectSelectedOfferId = ({ offers }: RootState): number => offers.selectedOfferId;
+
+export const selectSelectedOffer = ({ offers }: RootState): PrizeoutOffer =>
+    // A little unclear what the originally intended structure for PrizeoutOffer entails
+    // so just plucking off the single set of offers here:
+    offers.offers[0].data.find((e) => e.id === offers.selectedOfferId);
+
+export const selectSelectedGiftCardId = ({ offers }: RootState): string => offers.selectedGiftCardId;
+
+export const selectSelectedGiftCard = createSelector(
+    [selectSelectedGiftCardId, selectSelectedOffer],
+    (selectedGiftCardId, selectedOffer) => {
+        return selectedOffer?.giftcard_list.find((e) => e.checkout_value_id == selectedGiftCardId);
+    },
+);
 
 export default offersSlice.reducer;
