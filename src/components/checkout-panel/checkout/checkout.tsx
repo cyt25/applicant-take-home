@@ -24,6 +24,12 @@ const CheckoutPanelView: React.FC = (): React.ReactElement => {
     const formattedBonus = formatCurrency(selectedGiftCard?.value_in_cents * 0.25);
     const formattedTotal = formatCurrency(selectedGiftCard?.value_in_cents * 1.25);
     const dispatch = useDispatch<AppDispatch>();
+    const data = {
+        checkout_value_id: selectedGiftCard?.checkout_value_id,
+        cost_in_cents: selectedGiftCard?.cost_in_cents,
+        name: selectedOffer?.name,
+        value_in_cents: selectedGiftCard?.value_in_cents,
+    };
 
     const giftCardClickHandler = (giftCard: PrizeoutOfferValueOptions) => {
         dispatch(setSelectedGiftCardId(giftCard.checkout_value_id));
@@ -84,7 +90,7 @@ const CheckoutPanelView: React.FC = (): React.ReactElement => {
                 )}
                 <div className="grid__item">
                     <section className="checkout__calculation">
-                        <CheckoutButton />
+                        <CheckoutButton data={data} />
                     </section>
                 </div>
             </div>
