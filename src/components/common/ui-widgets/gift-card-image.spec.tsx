@@ -1,5 +1,6 @@
 import { render, screen } from '../../../testing/test-utils';
 import React from 'react';
+import '@testing-library/jest-dom';
 import { GiftCardImage } from './gift-card-image';
 
 describe('Test Gift Card Image Component', () => {
